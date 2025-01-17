@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/transferir\ \(1\).png);
+  background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+}
+
+.personagem {
+  width: 30vw; /* Ajusta a largura proporcional à tela */
+  max-width: 300px; /* Define um limite máximo */
+  animation: caminhada 5s forwards, respirar 10s 5s infinite;
+}
+
+#textBox {
+  margin: 7vh 0; /* Margens verticais proporcionais à tela */
+  width: 90%; /* 80% da largura disponível */
+  max-width: 300px; /* Define um limite máximo */
+  animation: buttona 5s forwards, chacoalhar 10s 5s infinite;
+}
+
+#btn {
+  width: 90vw; /* 50% da largura da tela */
+  max-width: 400px; /* Limite máximo */
+  animation: buttona 5s, levitar 5s infinite;
+}
+
+/* Animação de Caminhada */
+@keyframes caminhada {
+  0% {
+    opacity: 0.1;
+    transform: translateX(0) rotate(0deg) scale(1); /* Posição inicial */
+  }
+  25% {
+  
+    transform: translateX(10vw) rotate(30deg) scale(1.2); /* Vai para a direita e cresce */
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(20vw) rotate(-30deg) scale(1.4); /* Vai mais para a direita e gira para o outro lado */
+  }
+  75% {
+    transform: translateX(10vw) rotate(15deg) scale(1.6); /* Volta um pouco e diminui */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg) scale(1.8); /* Volta à posição inicial */
+  }
+}
+
+/* Animação de Popup */
+@keyframes popup {
+  0% {
+    transform: scale(0.1); /* Posição inicial */
+  }
+  25% {
+    
+  }
+  50% {
+    transform: scale(1); /* Tamanho completo */
+}}
+
+
+@keyframes buttona {
+  0% {
+    opacity: 0.1;
+    transform: scale(0.1); /* Posição inicial */
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Tamanho completo */
+}}
+
+ @keyframes levitar {
+      0%, 100% {
+        transform:  translateY(0); /* Posição inicial */
+      }
+      50% {
+        transform:  translateY(-10px); /* Move suavemente para cima */
+      }}
+
+
+       @keyframes respirar {
+      0%, 100% {
+        transform:  scale(1.8); /* Tamanho normal */
+      }
+      50% {
+        transform: scale(1.6); /* Expande no meio da respiração */
+      }
+    }
+
+
+ @keyframes chacoalhar {
+      0%, 100% {
+        transform: translateX(0); /* Posição inicial */
+      }
+      25% {
+        transform: translateX(-5px); /* Move para a esquerda */
+      }
+      75% {
+        transform: translateX(5px); /* Move para a direita */
+      }
+    }
+
+
+/* Configurações para telas maiores */
+@media (min-width: 768px) {
+  .personagem {
+    width: 200px; /* Tamanho fixo maior */
+  }
+
+  #textBox {
+    width: 400px; /* Tamanho fixo maior */
+  }
+
+  #btn {
+    width: 400px; /* Tamanho fixo maior */
+  }
+}
