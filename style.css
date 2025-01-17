@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(/transferir\ \(1\).png);
+  background-image: url(transferir\ \(1\).png);
   background-size: cover; /* Ajusta a imagem para cobrir todo o fundo */
   background-repeat: no-repeat; /* Evita a repetição da imagem */
 }
